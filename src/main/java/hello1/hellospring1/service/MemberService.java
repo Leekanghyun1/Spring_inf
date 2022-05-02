@@ -32,7 +32,7 @@ public class MemberService {
     private  void validateDuplicateMember(Member member){
         memberRepository.findByName(member.getName())
         .ifPresent(me -> {
-            throw  new IllegalStateException("이미 존재하는 회원입니다. ");
+            throw  new IllegalStateException("이미 존재하는 회원입니다.");
         });
 
     }
